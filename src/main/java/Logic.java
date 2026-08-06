@@ -1,4 +1,3 @@
-package Calendar.src.main.java;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
