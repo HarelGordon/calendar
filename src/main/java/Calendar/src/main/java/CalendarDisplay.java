@@ -1,4 +1,4 @@
-package Calendar;
+package Calendar.src.main.java;
 
 
 import javafx.application.Application;
