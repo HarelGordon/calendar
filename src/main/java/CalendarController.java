@@ -25,8 +25,8 @@ public class CalendarController {
 
     private final int DAYS_IN_WEEK = 7;
     private final int WEEKS_IN_MONTH = 6;
-    private final int START_YEAR = 2020;
-    private final int END_YEAR = 2025;
+    private static final int YEARS_BEFORE_CURRENT = 5;
+    private static final int YEARS_AFTER_CURRENT = 5;
     private final int START_MONTH = 1;
     private final int END_MONTH = 12;
 
@@ -46,8 +46,12 @@ public class CalendarController {
      * Populates them with valid values.
      */
     public void comboBoxInitialize() {
-        // Populate year combo box with a range of years
-        for (int year = START_YEAR; year <= END_YEAR; year++) {
+        // Keep the year selector useful as time passes: show five years before
+        // and five years after the current year.
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        for (int year = currentYear - YEARS_BEFORE_CURRENT;
+             year <= currentYear + YEARS_AFTER_CURRENT;
+             year++) {
             comboYear.getItems().add(year);
         }
         // Populate month combo box with all months of the year
