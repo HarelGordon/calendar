@@ -2,6 +2,10 @@
 
 A lightweight desktop calendar application built with Java, JavaFX, FXML, and Maven. Users can select a month and year, view the calendar, and create or edit meeting notes for individual dates.
 
+<p>
+  <img src="assets/Screenshot.png" alt="App Preview" width="450">
+</p>
+
 ## Features
 
 - Monthly calendar view.
